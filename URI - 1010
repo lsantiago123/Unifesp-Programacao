@@ -7,9 +7,9 @@ int main() {
     double valor1;
     double valor2;
     double valorf;
-        scanf("%d %d %lf",&cpeca1,&numerop1,&valor1);
-        scanf("%d %d %lf",&cpeca2,&numerop2,&valor2);
+        scanf("%d %d %lf", &cpeca1, &numerop1, &valor1);
+        scanf("%d %d %lf", &cpeca2, &numerop2, &valor2);
         valorf = numerop1 * valor1 + numerop 2 * valor2;
-                    printf("VALOR A PAGAR: R$ %.2lf\n",valorf);
+            printf("VALOR A PAGAR: R$ %.2lf\n", valorf);
     return 0;
 }
