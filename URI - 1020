@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main() {
-    int idadedias,a,b,c;
-        scanf("%d",&idadedias);
-        a=idadedias/365;
-        b=(idadedias%365)/30;
-        c=(idadedias%365)%30;
-            printf("%d ano(s)\n",a);
-            printf("%d mes(es)\n",b);
-            printf("%d dia(s)\n",c);
+    int idadedias, a, b, c;
+        scanf("%d", &idadedias);
+        a = idadedias / 365;
+        b = (idadedias % 365) / 30;
+        c = (idadedias % 365) % 30;
+            printf("%d ano(s)\n", a);
+            printf("%d mes(es)\n", b);
+            printf("%d dia(s)\n", c);
     return 0;
 }
