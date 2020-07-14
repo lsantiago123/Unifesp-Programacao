@@ -4,11 +4,11 @@ int main() {
     int horastrab;
     double ganhoporhora;
     double salario;
-        scanf("%d",&funcionario);
-        scanf("%d",&horastrab);
-        scanf("%lf",&ganhoporhora);
-            printf("NUMBER = %d\n",funcionario);
-            salario=horastrab*ganhoporhora;
-                printf("SALARY = U$ %.2lf\n",salario);
+        scanf("%d", &funcionario);
+        scanf("%d", &horastrab);
+        scanf("%lf", &ganhoporhora);
+            printf("NUMBER = %d\n", funcionario);
+            salario = horastrab * ganhoporhora;
+                printf("SALARY = U$ %.2lf\n", salario);
     return 0;
 }
