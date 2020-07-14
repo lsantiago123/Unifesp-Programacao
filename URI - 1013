@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main() {
-int A,B,C;
-int resultado;
-scanf("%d %d %d",&A,&B,&C);
-resultado=(A+B+abs(A-B))/2;
-resultado=(resultado+C+abs(resultado-C))/2;
-printf("%d eh o maior\n",resultado);
+    int A,B,C;
+    int resultado;
+        scanf("%d %d %d",&A,&B,&C);
+        resultado=(A+B+abs(A-B))/2;
+        resultado=(resultado+C+abs(resultado-C))/2;
+            printf("%d eh o maior\n",resultado);
     return 0;
 }
