@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() {
+    double num;
+    int x;
+    int i;
+    double notas[6] = {100.00,50.00,20.00,10.00,5.00,2.00};
+    double moedas[6] = {1.00,0.50,0.25,0.10,0.05,0.01};
+    int notas1[6];
+    int moedas1[6];
+    scanf ("%lf", &num);
+    printf ("NOTAS:\n");
+    x = num * 100;
+    notas1[0] = x / 10000;
+    x = x % 10000;
+    notas1[1] = x / 5000;
+    x = x % 5000;
+    notas1[2] = x / 2000;
+    x = x % 2000;
+    notas1[3] = x / 1000;
+    x = x % 1000;
+    notas1[4] = x / 500;
+    x = x % 500;
+    notas1[5] = x / 200;
+    x = x % 200;
+    moedas1[0] = x / 100;
+    x = x % 100;
+    moedas1[1] = x / 50;
+    x = x % 50;
+    moedas1[2] = x / 25;
+    x = x % 25;
+    moedas1[3] = x / 10;
+    x = x % 10;
+    moedas1[4] = x / 5;
+    x = x % 5;
+    moedas1[5] = x / 1;
+    for (i = 0; i < 6; i++){
+        printf ("%d nota(s) de R$ %.2lf\n", notas1[i], notas[i]);
+    }
+      printf ("MOEDAS:\n");
+    for (i = 0; i < 6; i++){
+        printf ("%d moeda(s) de R$ %.2lf\n", moedas1[i], moedas[i]);
+    }
+    return 0;
+}
