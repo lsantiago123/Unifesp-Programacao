@@ -33,12 +33,12 @@ int main() {
     moedas1[4] = x / 5;
     x = x % 5;
     moedas1[5] = x / 1;
-    for (i = 0; i < 6; i++){
-        printf ("%d nota(s) de R$ %.2lf\n", notas1[i], notas[i]);
+        for (i = 0; i < 6; i++){
+            printf ("%d nota(s) de R$ %.2lf\n", notas1[i], notas[i]);
     }
-      printf ("MOEDAS:\n");
-    for (i = 0; i < 6; i++){
-        printf ("%d moeda(s) de R$ %.2lf\n", moedas1[i], moedas[i]);
+        printf ("MOEDAS:\n");
+        for (i = 0; i < 6; i++){
+            printf ("%d moeda(s) de R$ %.2lf\n", moedas1[i], moedas[i]);
     }
     return 0;
 }
