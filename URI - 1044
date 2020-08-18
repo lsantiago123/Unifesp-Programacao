@@ -1,1 +1,25 @@
-
+#include <stdio.h>
+int main() {
+    int a, b;
+    int resultado1, resultado2;
+    scanf ("%d %d", &a, &b);
+    if (a > b){
+        resultado1 = a % b;
+        if (resultado1 == 0){
+            printf ("Sao Multiplos\n");
+        }
+        else{
+        printf ("Nao sao Multiplos\n");
+        }
+    }
+    if (b > a){
+        resultado2 = b % a;
+        if (resultado2 == 0){
+            printf ("Sao Multiplos\n");
+        }
+        else{
+            printf ("Nao sao Multiplos\n");
+        }
+    }
+    return 0;
+}
