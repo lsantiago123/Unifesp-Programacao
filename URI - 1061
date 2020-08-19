@@ -1,0 +1,26 @@
+#include <stdio.h>
+ 
+int main() {
+    int dia1, dia2, hora1, hora2, min1, min2, seg1, seg2;
+    int dia, hora, min, seg;
+    int tempo1, tempo2, tempof;
+    char d1[5], d2[5];
+      scanf ("%s %d", &d1, &dia1);
+      scanf ("%d : %d : %d", &hora1, &min1, &seg1);
+      scanf ("%s %d", &d2, &dia2);
+      scanf ("%d : %d : %d", &hora2, &min2, &seg2);
+        tempo1 = seg1 + (min1 * 60) + (hora1 * 60 * 60) + (dia1 * 60 * 60 * 24);
+        tempo2 = seg2 + (min2 * 60) + (hora2 * 60 * 60) + (dia2 * 60 * 60 * 24);
+        tempof = tempo2 - tempo1;
+        dia = tempof / (60 * 60 * 24);
+        tempof = tempof % (60 * 60 * 24);
+        hora = tempof / (60 * 60);
+        tempof = tempof % (60 * 60);
+        min = tempof / 60;
+        seg = tempof % 60;
+      printf ("%d dia(s)\n", dia);
+      printf ("%d hora(s)\n", hora);
+      printf ("%d minuto(s)\n", min);
+      printf ("%d segundo(s)\n", seg);
+    return 0;
+}
