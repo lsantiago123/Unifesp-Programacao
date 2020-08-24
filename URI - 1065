@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+int main() {
+    int a;
+    int i;
+    int pares = 0;
+    for (i = 0; i < 5; i++){
+        scanf("%d", &a);
+        if (a % 2 == 0){
+            pares++;
+        }
+    }
+    printf("%d valores pares\n", pares);
+    return 0;
+}
