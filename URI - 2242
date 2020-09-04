@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char risada[55], vogal[55];
+    int i;
+    int v = 0;
+    int numdevogal;
+    scanf ("%s", risada);
+    for (i = 0; risada[i]; i++){
+        if (risada[i] == 'a' || risada[i] == 'e' || risada[i] == 'i' || risada[i] == 'o' || risada[i] == 'u'){
+            vogal[v] = risada[i];
+            v++;
+        }
+    }
+    vogal[v] = '\0';
+    numdevogal = strlen(vogal);
+    for (i = 0, v = numdevogal - 1; i < numdevogal; i++, v--){
+        if (vogal[i] != vogal[v]){
+            printf ("N\n");
+            return 0;
+        }
+    }
+    printf ("S\n");
+    return 0;
+}
