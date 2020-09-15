@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    int n, i, l, x, qleds;
+    char nleds[100];
+    scanf ("%d", &n);
+    for (i = 0; i < n; i++){
+        qleds = 0;
+        scanf ("%s", nleds);
+        for (l = 0; l < strlen(nleds); l++){
+            x = nleds[l]; 
+            switch(x){
+                case '0':
+                    qleds = qleds + 6;
+                    break;
+                case '1':
+                    qleds = qleds + 2;
+                    break;
+                case '2':
+                    qleds = qleds + 5;
+                    break;
+                case '3':
+                    qleds = qleds + 5;
+                    break;
+                case '4':
+                    qleds = qleds + 4;
+                    break;
+                case '5':
+                    qleds = qleds + 5;
+                    break;
+                case '6':
+                    qleds = qleds + 6;
+                    break;
+                case '7':
+                    qleds = qleds + 3;
+                    break;
+                case '8':
+                    qleds = qleds + 7;
+                    break;
+                case '9':
+                    qleds = qleds + 6;
+                    break;
+            }
+        }
+        printf ("%d leds\n", qleds);
+    }
+    return 0;
+}
