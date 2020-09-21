@@ -1,0 +1,26 @@
+#include <stdio.h>
+ 
+int main() {
+    char o;
+    int lin, colu;
+    double m[12][12];
+    int aux = 0;
+    double soma = 0;
+    scanf ("%s", &o);
+    for (lin = 0; lin < 12; lin++){
+        for (colu = 0; colu < 12; colu++)
+            scanf ("%lf", &m[lin][colu]);
+    }
+    for (lin = 1; lin < 12; lin++){
+        for (colu = 0; colu <= aux; colu++)
+            soma = soma + m[lin][colu];
+            aux ++;
+    }
+    if (o == 'S'){
+        printf (".1lf\n", soma);
+    }
+    else {
+        printf ("%.1lf\n", soma / 66);
+    }
+    return 0;
+}
