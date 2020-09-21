@@ -1,0 +1,36 @@
+#include <stdio.h>
+ 
+int main() {
+    int n, aux;
+    int imatriz, fmatriz;
+    int m[101][101];
+    int lin, colu;
+    do{
+        scanf ("%d", &n);
+        if (n == 0)
+            return 0;
+            imatriz = 0;
+            fmatriz = n;
+            aux = 1;
+            while (fmatriz > 0){
+                for (lin = imatriz; lin < fmatriz; lin++)
+                    for (colu = imatriz; colu < fmatriz; colu++)
+                        m[lin][colu] = aux;
+                        imatriz ++;
+                        fmatriz --;
+                        aux ++;
+            }
+            for (lin = 0; lin < n; lin++){
+                for (colu = 0; colu < n; colu++){
+                    if (colu == 0)
+                        printf ("%3d", m[lin][colu]);
+                    else
+                        printf (" %3d", m[lin][colu]);
+                }
+                printf ("\n");
+            }
+            printf ("\n");
+    }
+    while(1);
+    return 0;
+}
