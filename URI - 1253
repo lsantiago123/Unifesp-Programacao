@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int n, deslocamento;
+    char letras[51];
+    int i;
+    char aux;
+    scanf ("%d", &n);
+    while (n > 0){
+        scanf ("%s",letras);
+        scanf ("%d", &deslocamento);
+        for (i = 0; i < strlen(letras); i++){
+            aux = letras[i];
+            if (aux >=  'A' && aux <= 'Z'){
+                if (aux == '\0')
+                break;
+                if ((aux - deslocamento) < 'A'){
+                    printf ("%c", (aux - deslocamento) +26);    
+                }
+                else{
+                    printf ("%c", (aux - deslocamento));
+                }
+            }
+        }
+        printf ("\n");
+        n--;
+    }
+    return 0;
+}
