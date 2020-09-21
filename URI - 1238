@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+ 
+int main() {
+    int n, l1, l2, total;
+    char letras1[51], letras2[51];
+    int i;
+    scanf ("%d", &n);
+    while (n > 0){
+        scanf ("%s", letras1);
+        scanf ("%s", letras2);
+        l1 = strlen (letras1);
+        l2 = strlen (letras2);
+        if (l1 > l2){
+            total = l1;
+        }
+        else{
+            total = l2;
+        }
+        for (i = 0; i < total; i++){
+            if (i < l1){
+                printf ("%c", letras1[i]);
+            }
+            if (i < l2){
+                printf ("%c", letras2[i]);
+            }
+        }
+        printf ("\n");
+        n --;
+    }
+    return 0;
+}
