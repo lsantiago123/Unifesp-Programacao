@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+int main() {
+    int n, numdeMatriz, i, k, soma, aux = 1, instancia = 0;
+    int matriz[9][9], somalinha, somacoluna, somamatriz[3][3];
+    
+ // "n" define a quantidade de matrizes que serão testadas.
+    scanf ("%d",&n);                         
+
+    for (numdeMatriz = 0; numdeMatriz < n; numdeMatriz++){           
+        somalinha = 0;
+        somacoluna = 0;
+        
+     // Loop de entrada dos valores do sudoku.
+        for (i = 0; i < 9; i++){
+            for (k = 0; k < 9; k++){
+                scanf ("%d", &matriz[i][k]);
+            }
+        }
+        
+     // Loop de inicialização das matrizes 3x3
+        for (i = 0; i < 3; i++){
+            for (k = 0; k < 3; k++){                       
+            somamatriz[i][k] = 0;
+            }
+        }
+        
+      // Loop de verificação de coluna.
+        for (i = 0; i < 9; i++){
+            for (k = 0; k < 9; k++){
+                soma = matriz[i][k] * matriz[i][k];
+                somacoluna += soma;
+            }
+            if (somacoluna != 285){
+                aux = 0;
+            }
+            somacoluna = 0;
+        }
+        // Loop de verificação de linha.
+        for (k = 0; k < 9; k++){
+            for (i = 0; i < 9; i++){
+                soma = matriz[i][k] * matriz[i][k];
+                somalinha += soma;
+            }
+            if (somalinha != 285){
+                aux = 0;
+            }
+            somalinha = 0;
+        }
+        // Loop de verificação das matrizes 3x3.
+        for (i = 0; i < 9; i++){
+            for (k = 0; k < 9; k++){
+                soma = matriz[i][k] * matriz[i][k];
+                somamatriz[i/3][k/3] += soma;
+            }
+        }
+        for(i = 0; i < 3; i++){
+            for (k = 0; k < 3; k++){
+                if (somamatriz[i][k] != 285){
+                    aux = 0;
+                    }
+                }
+            }
+        instancia ++;
+        printf ("Instancia %d\n", instancia);
+
+    if (aux == 1){
+        printf ("SIM\n\n");
+    }
+    else{
+        printf ("NAO\n\n");
+    }
+    aux = 1;
+    }
+    return 0;
+}
